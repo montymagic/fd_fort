@@ -1,0 +1,4 @@
+#!/bin/bash
+django-admin.py startproject $1
+cd $1
+

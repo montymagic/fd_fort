@@ -1,0 +1,11 @@
+#!/bin/sh
+
+sudo apt-get install -y mysql-client mysql-server libmysql-ruby libmysqlclient-dev
+sleep 10
+rvm 1.9.3 do gem install mysql2
+sleep 10
+cat >> /home/op/.bash_profile << EOF
+source ~/.profile
+source ~/.bashrc
+EOF
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+ps -p $1
+
+if [ $(ps p $1 | wc -l) -gt 1 ]; then
+	echo "process running "
+else 
+	eval "bash start"
+	#eval "(node /home/op/nodejs_prj/node_sample.js) &"
+        pid=$!
+        echo $pid
+
+fi

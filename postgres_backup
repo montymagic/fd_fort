@@ -1,0 +1,8 @@
+#!/bin/bash
+#wget http://www.commandprompt.com/ppbook/booktown.sql
+wget $1
+# sudo -u postgres /usr/lib/postgresql/9.1/bin/pg_dump -U geekstuff erp -f mydb.sql
+sudo -u postgres /usr/lib/postgresql/9.1/bin/createdb bookt -O postgres
+sudo -u postgres psql -f booktown.sql bookt
+#pg_restore -i -h localhost -p 5432 -U postgres -d booktown -v booktown.sql
+

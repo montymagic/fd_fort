@@ -1,0 +1,6 @@
+#!/bin/sh
+cat >> /home/op/text345.txt <<EOF
+jaust added
+to see it works //
+EOF
+

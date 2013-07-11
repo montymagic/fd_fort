@@ -1,0 +1,2 @@
+#!/bin/bash
+cp fort41 $1

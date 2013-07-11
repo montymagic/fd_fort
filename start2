@@ -1,0 +1,7 @@
+#!/bin/bash
+eval "(java jav_inc) &"
+MY_JOB_PID='ps ax | grep -w "jav_inc" | grep -v grep | awk '{print $1}''
+
+if [ -z $MY_JOB_ID ]; then
+	eval(java jav_inc) &
+fi

@@ -1,0 +1,4 @@
+#!/bin/bash
+touch mydb2.sql
+chmod 777 mydb2.sql
+sudo -u postgres /usr/lib/postgresql/9.1/bin/pg_dump -U postgres mydb -f mydb2.sql

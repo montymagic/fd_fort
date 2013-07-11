@@ -1,0 +1,14 @@
+#!/bin/bash 
+eval "(java jav_inc) &"
+eval "nohup bash checkps &"
+pid=$!
+echo $pid
+if [ $(ps p $1 | wc -l) -gt 1 ]; then
+	echo "process running"
+else
+	
+	eval "bash checkps $pid"	
+	eval "(java jav_inc) &"
+	pid=$!
+	echo $pid
+fi
